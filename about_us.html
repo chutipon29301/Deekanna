@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	  <!-- Load Javascript from scripts folder -->
+	<script src = "scripts/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/w3.css">
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<!-- Edit by max -->
+    <ul class="w3-navbar w3-top w3-large  w3-right-align topnav menu_bar">
+    	<li class="w3-hide-medium w3-hide-large  w3-opennav w3-right">
+	    	<a href="javascript:void(0);" onclick="myFunction()"><img src="images/ic_menu_black_48dp.png" /></a>
+	  	</li>
+		<li id="Home"><a href="">Home</a></li>
+        <li class=" w3-hide-small w3-right"><a href="">Login</a></li>
+    <li class=" w3-hide-small w3-right"><a href="">About Us</a></li>
+    <li class=" w3-hide-small w3-right"><a href="">FAQ</a></li>
+    <li class=" w3-hide-small w3-right"><a href="">Gallery</a></li>
+    <li class=" w3-hide-small w3-right"><a href="">Current Event</a></li>
+  
+		<li class=" w3-hide-small w3-right"><a href="">Registration</a></li>
+	</ul>
+
+	<div id="demo" class="menu_bar w3-hide w3-hide-large w3-hide-medium topnav">
+		<ul class="w3-navbar w3-left-align w3-large topnav ">
+		  <li><a href="#">Link 1</a></li>
+          <li><a href="">Login</a></li>
+    <li><a href="">About Us</a></li>
+    <li><a href="">FAQ</a></li>
+    <li><a href="">Gallery</a></li>
+    <li><a href="">Current Event</a></li>
+  </ul>
+		  <li><a href="">Registration</a></li>
+		</ul>
+	</div>
+
+
+	<script>
+	function myFunction() {
+	    var x = document.getElementById("demo");
+	    if (x.className.indexOf("w3-show") == -1) {
+	        x.className += " w3-show";
+	    } else { 
+	        x.className = x.className.replace(" w3-show", "");
+	    }
+	}
+	</script>
+
+	<h1>Hello World</h1>
+	</body>
+</html>
