@@ -14,3 +14,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+function sendInfo(event) {
+	var sendingInfo = {
+		firstName1: getElementById('firstName1'),
+		lastName1: getElementById('lastName1'),
+		id1: getElementById('id1'),
+		firstName2: getElementById('firstName2'),
+		lastName2: getElementById('lastName2'),
+		id2: getElementById('id2'),
+		firstName3: getElementById('firstName3').
+		lastName3: getElementById('lastName3');
+		id3: getElementById('id3')
+	}
+}
