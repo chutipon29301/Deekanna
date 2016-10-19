@@ -1,0 +1,19 @@
+.white{
+  color : #fff;
+}
+
+.background-pink1{
+  background-color : #fac3db;
+}
+
+.background-pink2{
+  background-color : #ffe4f7;
+}
+
+
+html {
+  background-image: url("Background/tumblr_inline_muxx5stTvf1s0gyrx.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size:;
+}
