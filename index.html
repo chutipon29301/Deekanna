@@ -28,10 +28,17 @@
 		<header class="w3-container w3-pink">
 			<p> 
 				<span class="w3-opennav w3-xlarge" onclick="w3_open()" id="openNav" style=" width:100%;">&#9776;
-				</span> My Header 
+				 Deekanna
 				<a href="index.html">
 					<img  src="images/logo_36x36.png" />
 				</a>
+                </span>
+                 <p id = "sideHead" class="w3-opennav w3-xlarge" style=" display:none; width:100%;">
+                 Deekanna
+				<a href="index.html">
+					<img  src="images/logo_36x36.png" />
+				</a>
+                </p>
 			</p>
 		</header>
 
@@ -72,11 +79,13 @@
 			document.getElementById("mySidenav").style.width = "25%";
 			document.getElementById("mySidenav").style.display = "block";
 			document.getElementById("openNav").style.display = 'none';
+			document.getElementById("sideHead").style.display = "block";
 		}
 		function w3_close() {
 			document.getElementById("main").style.marginLeft = "0%";
 			document.getElementById("mySidenav").style.display = "none";
-			document.getElementById("openNav").style.display = "inline-block";
+			document.getElementById("openNav").style.display = "block";
+			document.getElementById("sideHead").style.display = "none";
 		}
 	</script>
 	</html>
