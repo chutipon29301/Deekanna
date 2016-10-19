@@ -22,8 +22,8 @@ function sendInfo(event) {
 		firstName2: getElementById('firstName2'),
 		lastName2: getElementById('lastName2'),
 		id2: getElementById('id2'),
-		firstName3: getElementById('firstName3').
-		lastName3: getElementById('lastName3');
+		firstName3: getElementById('firstName3'),
+		lastName3: getElementById('lastName3'),
 		id3: getElementById('id3')
 	}
 }
