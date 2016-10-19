@@ -2,13 +2,65 @@
 <html>
 	  <!-- Load Javascript from scripts folder -->
 	<script src = "scripts/main.js"></script>
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="stylesheet" type="text/css" href="styles/w3.css">
+	
 	<head>
 		<title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+    	<link rel="stylesheet" type="text/css" href="styles/w3.css">
 	</head>
 	
 	<body>
-	    
+	    <nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="mySidenav">
+  <a href="javascript:void(0)"
+  onclick="w3_close()"
+  class="w3-closenav w3-large">Close &times;</a>
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+  <a href="#">Link 5</a>
+	</nav>
+    
+    <div id="main">
+
+	<header class="w3-container w3-pink">
+  <p> <span class="w3-opennav w3-xlarge" onclick="w3_open()" id="openNav" style=" width:100%;">&#9776; </span> My Header <a href="index.html">
+					<img  src="images/logo_36x36.png" >
+				</a></p>
+  
+  
+	</header>
+
+
+<div class="w3-container w3-row">
+ 	<div class="w3-col w3-amber w3-hover-aqua">
+  <h2>Max</h2>
+  <p>Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano Nano </p>
+  <p>Group S</p>
+</div>
+
+</div>
+
 	</body>
+    
+    <footer class="w3-container w3-pink w3-centered">
+  		<h>Footer</h>
+  		<p>Footer information goes here</p>
+	</footer>
+
+    <script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidenav").style.width = "25%";
+  document.getElementById("mySidenav").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidenav").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
 </html>
