@@ -1,64 +1,111 @@
-<html><!-- Load Javascript from scripts folder --><head><script src="scripts/main.js"></script>
+<!DOCTYPE html>
+<html>
+<!-- Load Javascript from scripts folder -->
+<script src = "scripts/main.js"></script>
+<!-- Jquery -->
+<script src = "scripts/jquery-3.1.1.min.js"></script>
+<script src = "scripts/script.js"></script>
 
-
-	<title></title>
+<head>
+	<title>De Kan Na</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="styles/style.css" rel="stylesheet" type="text/css">
-	<link href="styles/w3.css" rel="stylesheet" type="text/css">
-    <meta http-equiv="Content-Language" content="th">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/w3.css">
 </head>
 
 <body>
-	<nav class="w3-sidenav w3-white w3-card-2" id="mySidenav" style="display:none">
-		<a class="w3-closenav w3-large" onClick="w3_close()" href="javascript:void(0)">Close &times;</a>
+	<!-- Navbar -->
+	<nav id="mySidenav" class="w3-sidenav w3-white w3-card-2 w3-hide-small" style="display:none">
+		<a href="index.html" class="w3-hover-pink">Home</a>
 		<a href="about_us.html">About us</a>
 		<a href="gallery.html">Gallery</a>
 		<a href="#">Registration</a>
-		<a href="#">???????????????????????</a>
+		<a href="#">Link 4</a>
 		<a href="#">Link 5</a>
 	</nav>
+	<!-- Small Navbar -->
+	<nav class="w3-navbar w3-large w3-left-align w3-card-8 w3-hide-medium w3-hide-large bg-pink1">
+		<li class="w3-hide-medium w3-hide-large w3-opennav w3-right bg-pink1">
+			<a class="toggle-nav w3-right">Option</a>
+		</li>
+		<li><a href="index.html">Home</a></li>
+	</nav>
 
+	<div class="panel w3-hide-medium w3-hide-large " style="display:none">
+		<ul class="w3-navbar w3-left-align w3-large">
+			
+			<li>
+				<a href="about_us.html">About Us</a>
+			</li>
+			<li>
+				<a href="gallery.html">Gallery</a>
+			</li>
+			<li>
+				<a href="#">Registration</a>
+			</li>
+		</ul>
+	</div>
+	<!-- End Small Navbar -->
+	<!-- End Navbar -->
+	
 	<div id="main">
-		<header class="w3-container w3-pink">
+		<header class="w3-container cpink w3-hide-small ">
 			<p> 
-				<span class="w3-opennav w3-xlarge" id="openNav" style=" width:100%;" onClick="w3_open()">?
-				</span> My Header 
-				<a href="index.html">
-					<img src="images/logo_36x36.png">
-				</a>
+				<span class="w3-opennav w3-xlarge" onclick="nav_toggle()" id="openNav" style=" width:100%;">&#9776;
+					Deekanna
+					<a href="index.html">
+						<img  src="images/logo_36x36.png" />
+					</a>
+				</span>
+				<p id = "sideHead" class="w3-opennav w3-xlarge" style=" display:none; width:100%;">
+					Deekanna
+					<a href="index.html">
+						<img  src="images/logo_36x36.png" />
+					</a>
+				</p>
 			</p>
 		</header>
 
-		<div class="w3-container w3-row">
+		<div class="w3-container w3-row " style="padding-right: 100px;padding-left: 100px">
 			<table class="w3-table">
 				<tbody><tr>
 					<td>
-						<div class="w3-content w3-text-theme" style="padding: 20px">
-							<h1 style="background-color: pink;">About us</h1>
-							<p class="w3-panel w3-pale-red">
-								"โครงการดีกันนะ" เป็นโครงการประกวดคลิปวิดีโอสั้น ที่มีเนื้อหาส่งเสริมและกระตุ้นให้นิสิตนักศึกษาและบุคคลทั่วไปตระหนักถึงคุณค่าของการทำความดี รู้จักใส่ใจและให้ความสำคัญกับบุคคลรอบข้างและสังคมมากขึ้น เปิดมุมมองความคิดและปรับเปลี่ยนทัศนคติที่มีต่อการกระทำการต่างๆในชีวิตประจำวัน โดยนำเสนอเรื่องราวผ่านสื่อที่สร้างสรรค์ เป็นแรงกระตุ้นให้นิสิตนักศึกษาและบุคคลทั่วไปทำความดี ร่วมกันพัฒนาและเป็นแรงพลังขับเคลื่อนสังคมให้ดำเนินไปตามทิศทางที่ถูกต้องและเหมาะสม
-
-							</p>
-							<p class="w3-theme-l3"></p>
-						</div>
+						<div class="w3-container  w3-animate-bottom">
+							<h1 class="w3-round-large" style="background-color: pink;padding-left: 10px">About us</h1>
+							<div class="w3-panel w3-leftbar w3-pale-red">
+								<span style="font-size:150px;line-height:0.6em;opacity:0.2">&#10077;</span>
+								<p class="w3-large w3-pale-red" style="margin-top:-40px">"vavnapucaovjiajriajvasnvawnrvoianvasdnjvoairwmnvarnvasnvaonviasvaosvajrviogwjafijawoaiosvhuawrnviarjwawsvnajviarwjirajviasjviawjrgogrij
+								</p>
+							</div>
+						</div>	
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<table class="w3-table">
 							<tbody><tr>
-								<td class="w3-right" style="padding-right: : 12px !important">
-									<iframe width="145" height="34" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdeekanna%2F&amp;width=70&amp;layout=button_count&amp;action=like&amp;size=large&amp;show_faces=true&amp;share=true&amp;height=46&amp;appId" frameborder="0" scrolling="no" style="border:none;overflow:hidden;align-content: center;" allowtransparency="true"></iframe>
+								<td class="w3-right w3-animate-opacity" >
+									<a href="https://goo.gl/XJCqyW" target="_blank">
+										<button class="w3-btn w3-round-xxlarge w3-purple">Youtube</button>
+									</a>
 								</td>
-								<td class="w3-right">
+								<td class="w3-right w3-animate-opacity">
 									<a href="https://www.facebook.com/deekanna/?fref=ts" target="_blank">
 										<button class="w3-btn w3-round-xxlarge w3-purple">Facebook</button>
 									</a>
 								</td>
-								<td class="w3-right">
-									<a href="https://goo.gl/XJCqyW" target="_blank">
-										<button class="w3-btn w3-round-xxlarge w3-purple">Youtube</button>
-									</a>
+								<td class="w3-right w3-animate-opacity" style="padding-top: 12px !important">
+									<iframe width="180" height="34" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdeekanna%2F&amp;width=70&amp;layout=button_count&amp;action=like&amp;size=large&amp;show_faces=true&amp;share=true&amp;height=46&amp;appId" frameborder="0" scrolling="no" style="border:none;overflow:hidden;align-content: center;" allowtransparency="true"></iframe>
+
+								</td>
+								
+								<td>
+									<div class="w3-right w3-accordion w3-animate-opacity">
+										<button onclick="myFunc('Demo1')" class="w3-btn w3-round-xxlarge w3-purple">Email</button>
+										<div id="Demo1" class="w3-accordion-content">
+											<p>Lorem ipsum...</p>
+										</div>
+									</div>
 								</td>
 							</tr>
 						</tbody></table>
@@ -67,35 +114,21 @@
 			</tbody></table>
 		</div>
 
-		<footer class="w3-container w3-row w3-pink w3-centered">
-			<div class=" w3-col "> 
+		<footer class="w3-container w3-row bg-pink1 w3-centered">
+			<div class = " w3-col "> 
 				<p>
-					<img src="images/logo_36x36.png">Deekanna
+					<img src="images/logo_36x36.png" />Deekanna
 				</p> 
 			</div>
-			<div class="w3-col">
+			<div class ="w3-col">
 				<p>Footer Information</p> 
 			</div>
-			<div class="w3-col">
+			<div class ="w3-col">
 				<p>
 					<a href="#"> information </a>
 				</p>
 			</div>
 		</footer>
-	
-
-	
-	<script>
-		function w3_open() {
-			document.getElementById("main").style.marginLeft = "25%";
-			document.getElementById("mySidenav").style.width = "25%";
-			document.getElementById("mySidenav").style.display = "block";
-			document.getElementById("openNav").style.display = 'none';
-		}
-		function w3_close() {
-			document.getElementById("main").style.marginLeft = "0%";
-			document.getElementById("mySidenav").style.display = "none";
-			document.getElementById("openNav").style.display = "inline-block";
-		}
-	</script>
-	</div></body><!-- On HTML Javascript --></html>
+	</div>
+</body>
+</html>
