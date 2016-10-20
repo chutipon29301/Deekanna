@@ -5,9 +5,12 @@
 .bg-pink1{
   background-color : #ffe4f7;
 }
-
+.cpink {
+	background-color: #ff9bf3;
+}
 .bg-pink2{
-  background-color : #fac3db;
+	background-color : #fac3db;
+	visibility: inherit;  
 }
 
 
