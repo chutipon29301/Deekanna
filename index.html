@@ -15,8 +15,8 @@
 
 <body>
 	<!-- Navbar -->
-	<nav id="mySidenav" class="w3-sidenav w3-white w3-card-2 w3-hide-small" style="display:none">
-		<a href="index.html" class="w3-hover-pink">Home</a>
+	<nav id="mySidenav" class="w3-sidenav w3-white w3-card-2 w3-hide-small w3-animate-left" style="display:none">
+		<a href="" class="w3-hover-pink">Home</a>
 		<a href="about_us.html">About us</a>
 		<a href="gallery.html">Gallery</a>
 		<a href="#">Registration</a>
@@ -24,27 +24,17 @@
 		<a href="#">Link 5</a>
 	</nav>
 	<!-- Small Navbar -->
-	<nav class="w3-navbar w3-large w3-left-align w3-card-8 w3-hide-medium w3-hide-large bg-pink1">
-		<li class="w3-hide-medium w3-hide-large w3-opennav w3-right bg-pink1">
-			<a class="toggle-nav w3-right">Option</a>
-		</li>
-		<li><a href="index.html">Home</a></li>
-	</nav>
 
-	<div class="panel w3-hide-medium w3-hide-large " style="display:none">
-		<ul class="w3-navbar w3-left-align w3-large">
-			
-			<li>
-				<a href="about_us.html">About Us</a>
-			</li>
-			<li>
-				<a href="gallery.html">Gallery</a>
-			</li>
-			<li>
-				<a href="#">Registration</a>
-			</li>
-		</ul>
-	</div>
+	<ul class="w3-navbar bg-pink1 w3-hide-large w3-hide-medium">
+    	<li class="w3-dropdown-click">
+      	<a class="toggle-nav w3-left-align" href="#">Option</a>
+      	<div id="demo" class="panel w3-dropdown-content w3-white w3-card-4">
+        	<a href="index.html">Home</a>
+        	<a href="gallery.html">Gallery</a>
+        	<a href="#">Registration</a>
+      	</div>
+    	</li>
+  	</ul>
 	<!-- End Small Navbar -->
 	<!-- End Navbar -->
 	
