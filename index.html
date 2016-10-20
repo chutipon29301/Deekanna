@@ -15,7 +15,7 @@
 
 <body>
 	<!-- Navbar -->
-	<nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="mySidenav">
+	<nav id="mySidenav" class="w3-sidenav w3-white w3-card-2 w3-hide-small" style="display:none">
 		<a href="javascript:void(0)"
 		onclick="w3_close()"
 		class="w3-closenav w3-large">Close &times;</a>
@@ -27,68 +27,46 @@
 		<a href="#">Link 5</a>
 	</nav>
 
-	<!-- 
-	*
-	*
-	*	@ max or far Where is the end of this div tag ? 
-	*	I've put the closing tag where I comment 
-	*	Could you check weather I put it in the correct place?
-	*
-	*
-	 -->
-	<div id="main">
-
-		<header class="w3-container w3-pink w3-hide-small">
-			<p> 
-				<span class="w3-opennav w3-xlarge" onclick="w3_open()" id="openNav" style=" width:100%;">&#9776;
-					Deekanna
-					<a href="index.html">
-						<img  src="images/logo_36x36.png" />
-					</a>
-				</span>
-				<p id = "sideHead" class="w3-opennav w3-xlarge" style=" display:none; width:100%;">
-					Deekanna
-					<a href="index.html">
-						<img  src="images/logo_36x36.png" />
-					</a>
-				</p>
+	<header class="w3-container w3-pink w3-hide-small">
+		<p> 
+			<span class="w3-opennav w3-xlarge" onclick="w3_open()" id="openNav" style=" width:100%;">&#9776;
+				Deekanna
+				<a href="index.html">
+					<img  src="images/logo_36x36.png" />
+				</a>
+			</span>
+			<p id = "sideHead" class="w3-opennav w3-xlarge" style=" display:none; width:100%;">
+				Deekanna
+				<a href="index.html">
+					<img  src="images/logo_36x36.png" />
+				</a>
 			</p>
-		</header>
+		</p>
+	</header>
 
-		<!-- Small Navbar -->
-		<!-- @far Bug :Cant open option?? , max-->
-		<ul class="w3-navbar w3-large w3-left-align w3-card-8 w3-hide-medium w3-hide-large background-pink2">
-			<li class="w3-hide-medium w3-hide-large w3-opennav w3-right background-pink2">
-				<a class="toggle-nav">Option</a>
+	<!-- Small Navbar -->
+	<ul class="w3-navbar w3-large w3-left-align w3-card-8 w3-hide-medium w3-hide-large background-pink2">
+		<li class="w3-hide-medium w3-hide-large w3-opennav w3-right background-pink2">
+			<a class="toggle-nav">Option</a>
+		</li>
+		<li>
+			<a href="index.html">Home</a>
+		</li>
+	</ul>
+
+	<div class="panel w3-hide-medium w3-hide-large" style="display:none">
+		<ul class="w3-navbar w3-left-align w3-large">
+			<li>
+				<a href="about_us.html">About Us</a>
 			</li>
 			<li>
-				<a href="index.html">Home</a>
+				<a href="gallery.html">Gallery</a>
+			</li>
+			<li>
+				<a href="#">Registration</a>
 			</li>
 		</ul>
-
-		<div class="panel w3-hide-medium w3-hide-large" style="display:none">
-			<ul class="w3-navbar w3-left-align w3-large">
-				<li>
-					<a href="about_us.html">About Us</a>
-				</li>
-				<li>
-					<a href="gallery.html">Gallery</a>
-				</li>
-				<li>
-					<a href="#">Registration</a>
-				</li>
-			</ul>
-		</div>
-		<!-- End Small Navbar -->
- <!--  " that div is for te whole body of content exclude the sideNav" , max -->
-	
-	<!-- 
-	*
-	*
-	*	The div tag I mention above I put it before this comment
-	*
-	*
-	  -->
+	</div>
 	<!-- End Navbar -->
 
 	<!-- Slide Show -->
@@ -139,8 +117,6 @@
 		</div>
 	</footer>
     
-    </div>
-    <!-- this is the div that i move , Max -->
     
 </body>
 <!-- On HTML Javascript -->
