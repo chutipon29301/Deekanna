@@ -14,6 +14,7 @@
 </head>
 
 <body>
+	<!-- Navbar -->
 	<nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="mySidenav">
 		<a href="javascript:void(0)"
 		onclick="w3_close()"
@@ -26,125 +27,142 @@
 		<a href="#">Link 5</a>
 	</nav>
 
+	<!-- 
+	*
+	*
+	*	@ max or far Where is the end of this div tag ? 
+	*	I've put the closing tag where I comment 
+	*	Could you check weather I put it in the correct place?
+	*
+	*
+	 -->
 	<div id="main">
 
 		<header class="w3-container w3-pink w3-hide-small">
 			<p> 
 				<span class="w3-opennav w3-xlarge" onclick="w3_open()" id="openNav" style=" width:100%;">&#9776;
-				 Deekanna
-				<a href="index.html">
-					<img  src="images/logo_36x36.png" />
-				</a>
-                </span>
-                 <p id = "sideHead" class="w3-opennav w3-xlarge" style=" display:none; width:100%;">
-                 Deekanna
-				<a href="index.html">
-					<img  src="images/logo_36x36.png" />
-				</a>
-                </p>
+					Deekanna
+					<a href="index.html">
+						<img  src="images/logo_36x36.png" />
+					</a>
+				</span>
+				<p id = "sideHead" class="w3-opennav w3-xlarge" style=" display:none; width:100%;">
+					Deekanna
+					<a href="index.html">
+						<img  src="images/logo_36x36.png" />
+					</a>
+				</p>
 			</p>
 		</header>
 
 		<!-- Small Navbar -->
 
 		<ul class="w3-navbar w3-large w3-left-align w3-card-8 w3-hide-medium w3-hide-large background-pink2">
-		  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right background-pink2">
-		    <a class="toggle-nav">Option</a>
-		  </li>
-		  <li>
-		  	<a href="#">Home</a>
-		  </li>
+			<li class="w3-hide-medium w3-hide-large w3-opennav w3-right background-pink2">
+				<a class="toggle-nav">Option</a>
+			</li>
+			<li>
+				<a href="index.html">Home</a>
+			</li>
 		</ul>
 
 		<div class="panel w3-hide-medium w3-hide-large" style="display:none">
-        <ul class="w3-navbar w3-left-align w3-large">
-	    		<li>
-	    			<a href="about_us.html">About Us</a>
-	    		</li>
-	    		<li>
-	    			<a href="gallery.html">Gallery</a>
-	    		</li>
-	    		<li>
-	    			<a href="#">Registration</a>
-	    		</li>
+			<ul class="w3-navbar w3-left-align w3-large">
+				<li>
+					<a href="about_us.html">About Us</a>
+				</li>
+				<li>
+					<a href="gallery.html">Gallery</a>
+				</li>
+				<li>
+					<a href="#">Registration</a>
+				</li>
 			</ul>
-        </div>
-
-        <!-- End -->
-        <!-- Slide Show -->
-        <div class="w3-content w3-display-container">
-			<img class="mySlides w3-card-4" src="images/mercy.png" style="width:100%">
-			<img class="mySlides w3-card-4" src="images/namking1.png" style="width:100%">
-			<div class="w3-center w3-display-middle" style="width:100%">
-		    	<div class="w3-left w3-btn-floating" onclick="plusDivs(-1)">&#10094;</div>
-		    	<div class="w3-right w3-btn-floating" onclick="plusDivs(1)">&#10095;</div>
-		 	</div>
 		</div>
-		<script>
-			var slideIndex = 1;
-			showDivs(slideIndex);
+		<!-- End Small Navbar -->
 
-			function plusDivs(n) {
-			    showDivs(slideIndex += n);
-			}
+	</div>
+	<!-- 
+	*
+	*
+	*	The div tag I mention above I put it before this comment
+	*
+	*
+	  -->
+	<!-- End Navbar -->
 
-			function showDivs(n) {
-			    var i;
-			    var x = document.getElementsByClassName("mySlides");
-			    if (n > x.length) {slideIndex = 1} 
-			    if (n < 1) {slideIndex = x.length} ;
-			    for (i = 0; i < x.length; i++) {
-			        x[i].style.display = "none";
-			    }
-			    x[slideIndex-1].style.display = "block"; 
-			}
-		</script>
-		<!-- End -->
-
-		<div class="w3-container w3-row">
-			<div class="w3-col w3-amber w3-hover-aqua">
-				<h2></h2>
-				<p> </p>
-				<p> </p>
-				<p> </p>
-				<p> </p>
-				<p> </p>
-				<p>Group S</p>
-			</div>
+	<!-- Slide Show -->
+	<div class="w3-content w3-display-container">
+		<img class="mySlides w3-card-4" src="images/mercy.png" style="width:100%">
+		<img class="mySlides w3-card-4" src="images/namking1.png" style="width:100%">
+		<div class="w3-center w3-display-middle" style="width:100%">
+			<div class="w3-left w3-btn-floating" onclick="plusDivs(-1)">&#10094;</div>
+			<div class="w3-right w3-btn-floating" onclick="plusDivs(1)">&#10095;</div>
 		</div>
-
-
-		<footer class="w3-container w3-row w3-pink w3-centered">
-			<div class = " w3-col "> 
-				<p>
-					<img src="images/logo_36x36.png" />Deekanna
-				</p> 
-			</div>
-			<div class ="w3-col">
-				<p>Footer Information</p> 
-			</div>
-			<div class ="w3-col">
-				<p>
-					<a href="#"> information </a>
-				</p>
-			</div>
-		</footer>
-	</body>
-
-	<!-- On HTML Javascript -->
+	</div>
 	<script>
-		function w3_open() {
-			document.getElementById("main").style.marginLeft = "25%";
-			document.getElementById("mySidenav").style.width = "25%";
-			document.getElementById("mySidenav").style.display = "block";
-			document.getElementById("openNav").style.display = 'none';
-			document.getElementById("sideHead").style.display = "block";
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
 		}
-		function w3_close() {
-			document.getElementById("main").style.marginLeft = "0%";
-			document.getElementById("mySidenav").style.display = "none";
-			document.getElementById("openNav").style.display = "block";
-			document.getElementById("sideHead").style.display = "none";
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) {slideIndex = 1} 
+				if (n < 1) {slideIndex = x.length} ;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			x[slideIndex-1].style.display = "block"; 
 		}
 	</script>
-	</html>
+	<!-- End -->
+
+	<div class="w3-container w3-row">
+		<div class="w3-col w3-amber w3-hover-aqua">
+			<h2></h2>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p>Group S</p>
+		</div>
+	</div>
+
+	<footer class="w3-container w3-row w3-pink w3-centered">
+		<div class = " w3-col "> 
+			<p>
+				<img src="images/logo_36x36.png" />Deekanna
+			</p> 
+		</div>
+		<div class ="w3-col">
+			<p>Footer Information</p> 
+		</div>
+		<div class ="w3-col">
+			<p>
+				<a href="#"> information </a>
+			</p>
+		</div>
+	</footer>
+</body>
+<!-- On HTML Javascript -->
+<script>
+	function w3_open() {
+		document.getElementById("main").style.marginLeft = "25%";
+		document.getElementById("mySidenav").style.width = "25%";
+		document.getElementById("mySidenav").style.display = "block";
+		document.getElementById("openNav").style.display = 'none';
+		document.getElementById("sideHead").style.display = "block";
+	}
+	function w3_close() {
+		document.getElementById("main").style.marginLeft = "0%";
+		document.getElementById("mySidenav").style.display = "none";
+		document.getElementById("openNav").style.display = "block";
+		document.getElementById("sideHead").style.display = "none";
+	}
+</script>
+</html>
