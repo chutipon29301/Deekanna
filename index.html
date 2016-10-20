@@ -16,9 +16,10 @@
 <body>
 	<!-- Navbar -->
 	<nav id="mySidenav" class="w3-sidenav w3-white w3-card-2 w3-hide-small" style="display:none">
-		<a href="javascript:void(0)"
-		onclick="w3_close()"
-		class="w3-closenav w3-large">Close &times;</a>
+		<!-- <a href="javascript:void(0)"
+		onclick="nav_toggle()"
+		class="w3-closenav w3-large">Close &times;</a> -->
+		<!-- This may not be used // use same button to close // far -->
 		<a href="index.html">Home</a>
 		<a href="about_us.html">About us</a>
 		<a href="gallery.html">Gallery</a>
@@ -27,14 +28,12 @@
 		<a href="#">Link 5</a>
 	</nav>
     <!-- Small Navbar -->
-	<ul class="w3-navbar w3-large w3-left-align w3-card-8 w3-hide-medium w3-hide-large background-pink2">
+	<nav class="w3-navbar w3-large w3-left-align w3-card-8 w3-hide-medium w3-hide-large background-pink2">
 		<li class="w3-hide-medium w3-hide-large w3-opennav w3-right background-pink2">
-			<a class="toggle-nav">Option</a>
+			<a class="toggle-nav w3-right">Option</a>
 		</li>
-		<li>
-			<a href="index.html">Home</a>
-		</li>
-	</ul>
+		<li><a href="index.html">Home</a></li>
+	</nav>
 
 	<div class="panel w3-hide-medium w3-hide-large" style="display:none">
 		<ul class="w3-navbar w3-left-align w3-large">
@@ -54,7 +53,7 @@
     <div id="main">
 	<header class="w3-container w3-pink w3-hide-small">
 		<p> 
-			<span class="w3-opennav w3-xlarge" onclick="w3_open()" id="openNav" style=" width:100%;">&#9776;
+			<span class="w3-opennav w3-xlarge" onclick="nav_toggle()" id="openNav" style=" width:100%;">&#9776;
 				Deekanna
 				<a href="index.html">
 					<img  src="images/logo_36x36.png" />
@@ -68,8 +67,6 @@
 			</p>
 		</p>
 	</header>
-
-	
 
 	<!-- Slide Show -->
 	<div class="w3-content w3-display-container">
@@ -123,18 +120,6 @@
 </body>
 <!-- On HTML Javascript -->
 <script>
-	function w3_open() {
-		document.getElementById("main").style.marginLeft = "25%";
-		document.getElementById("mySidenav").style.width = "25%";
-		document.getElementById("mySidenav").style.display = "block";
-		document.getElementById("openNav").style.display = 'none';
-		document.getElementById("sideHead").style.display = "block";
-	}
-	function w3_close() {
-		document.getElementById("main").style.marginLeft = "0%";
-		document.getElementById("mySidenav").style.display = "none";
-		document.getElementById("openNav").style.display = "block";
-		document.getElementById("sideHead").style.display = "none";
-	}
+	/*i move it to the script.js file // Far*/
 </script>
 </html>
