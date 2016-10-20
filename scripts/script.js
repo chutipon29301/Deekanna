@@ -5,7 +5,7 @@ $(document).ready(function() {
 		$('#main').css('margin-left','0px');
     	$('#mySidenav').animate({
 			width: 'hide'
-		},"200");
+		},200);
 		toggle_nav = 0;
 		$('.panel').slideUp('fast')
 	    });
@@ -25,7 +25,7 @@ function nav_toggle() {
 		$('#main').css('margin-left','0px');
 		$('#mySidenav').animate({
 			width: 'toggle'
-		},"200");
+		},200);
 		toggle_nav = 0;
 	}
 }
