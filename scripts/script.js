@@ -2,12 +2,12 @@ var toggle_nav = 0;
 
 $(document).ready(function() {
 	$(window).resize(function(){
-    	document.getElementById("main").style.marginLeft = "0%";
-		document.getElementById("mySidenav").style.display = "none";
-		document.getElementById("openNav").style.display = "block";
-		document.getElementById("sideHead").style.display = "none";
+		$('#main').css('margin-left','0px');
+    	$('#mySidenav').animate({
+			width: 'hide'
+		},200);
 		toggle_nav = 0;
-		$('.panel').slideUp('slow')
+		$('.panel').slideUp('fast')
 	    });
 
     $('.toggle-nav').click(function() {
@@ -16,15 +16,16 @@ $(document).ready(function() {
 });
 
 function nav_toggle() {
-	$('#mySidenav').animate({
-		width: 'toggle'
-	},"fast");
 	if(toggle_nav == 0){
 		$('#main').css('margin-left','200px');
+		$('#mySidenav').show();
 		toggle_nav = 1;
 	}
 	else{
 		$('#main').css('margin-left','0px');
+		$('#mySidenav').animate({
+			width: 'toggle'
+		},200);
 		toggle_nav = 0;
 	}
 }
