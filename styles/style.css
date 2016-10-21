@@ -83,5 +83,10 @@ html {
 }
 
 .facebookBtn {
-  background-color: #34539d !important;
+  background-color: #3c5a94 !important;
+}
+
+.facebookLogo{
+  width: 23px;
+  height: 23px;
 }
