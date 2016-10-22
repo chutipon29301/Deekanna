@@ -44,9 +44,3 @@ function w3_close() {
 	document.getElementById("openNav").style.display = "block";
 	document.getElementById("sideHead").style.display = "none";
 }
-
-$(document).keyup(function(e) {     
-    if(e.keyCode== 27) {
-        $(".w3-modal").css("display","none");
-    } 
-});

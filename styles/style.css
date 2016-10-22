@@ -50,7 +50,7 @@ html {
     overflow: hidden;
 }
 
-iframe, .video-container img {
+.video-container iframe, .video-container img {
     position: absolute;
     top:0;
     left: 0;

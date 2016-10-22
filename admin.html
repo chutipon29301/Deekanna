@@ -5,7 +5,7 @@
 <script src = "scripts/script.js"></script>
 
 <head>
-	<title>De Kan Na</title>
+	<title>Admin</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
@@ -39,43 +39,6 @@
 		    	video[j].setAttribute("value",array[i].url);
 		    }
 		}
-
-		var full = location.pathname;
-		//var path = full.substr(1,full.lastIndexOf("/")) + "scripts/index_json.txt";
-		var path = "C:/xampp/htdocs/Dekanna/scripts/index_json.txt"
-		console.log(path);
-    	var fso  = new ActiveXObject("Scripting.FileSystemObject"); 
-   		var fh = fso.CreateTextFile("C:/xampp/htdocs/Dekanna/scripts/index_json.txt", true); 
-   		
-		$(document).ready(function(){
-			$('#saveIndex').click(function(){
-				var i,j,s;
-				s = "[";
-				for(i=0;i<slide.length;i++){
-					s += "{"
-					s += "\"url\": \"" + slide[i].value +"\"";
-					s += "},"
-				}
-				for(j=0;j<video.length;j++,i++){
-					s += "{"
-					s += "\"url\": \"" + video[j].value +"\"";
-					s += "}"
-					if(j!=video.length-1)
-						s += ",";
-				}
-				s += "]"
-				console.log(s);
-				fh.WriteLine(s); 
-   				fh.Close();
-			});
-		});
-		/*var full = location.pathname;
-		var path = full.substr(1,full.lastIndexOf("/")) + "scripts/index.txt";
-		console.log(path);
-    	var fso  = new ActiveXObject("Scripting.FileSystemObject"); 
-   		var fh = fso.CreateTextFile(path, true); 
-   		fh.WriteLine("hello"); 
-   		fh.Close();*/
 	</script>
 
 </head>
@@ -83,79 +46,88 @@
 <body>
 	<hr>
 	<h2 class="w3-center">Index</h2>
-	<div class="w3-row-padding">
-
-		<div class="w3-half">
-		<form class="w3-container w3-card-4">
-			<h2>Picture</h2>
-	  		<div class="w3-group">
-	    		<input class="slide w3-input" type="text" required>
-	    		<label class="w3-label w3-validate">Link 1</label>
-	  		</div>
-	  		<div class="w3-group">
-	    		<input class="slide w3-input" type="text" required>
-	    		<label class="w3-label w3-validate">Link 2</label>
-	  		</div>
-	  		<div class="w3-group">
-	    		<input class="slide w3-input" type="text" required>
-	    		<label class="w3-label w3-validate">Link 3</label>
-	  		</div>
+	<div class="w3-container">
+		<form action="formIndex.php" method="get" class="w3-container w3-row-padding w3-card-4">
+			
+				<div class="w3-half">
+					<h2>Picture</h2>
+			  		<div class="w3-group">
+			    		<input class="slide w3-input" type="text" name="pic1" required>
+			    		<label class="w3-label w3-validate">Link 1</label>
+			  		</div>
+			  		<div class="w3-group">
+			    		<input class="slide w3-input" type="text" name="pic2" required>
+			    		<label class="w3-label w3-validate">Link 2</label>
+			  		</div>
+			  		<div class="w3-group">
+			    		<input class="slide w3-input" type="text" name="pic3" required>
+			    		<label class="w3-label w3-validate">Link 3</label>
+			  		</div>
+			  	</div>
+			  	<div class="w3-half">
+					<h2>Video</h2>
+			  		<div class="w3-group">
+			    		<input class="video w3-input" type="text" name="vdo1" required>
+			    		<label class="w3-label w3-validate">Link 4</label>
+			  		</div>
+			  		<div class="w3-group">
+			    		<input class="video w3-input" type="text" name="vdo2" required>
+			    		<label class="w3-label w3-validate">Link 5</label>
+			  		</div>
+			  		<div class="w3-container w3-center w3-margin-bottom"><input class="w3-btn" type="submit"></div>
+				</div>	  
 		</form>
-		</div>
+	</div>
+	
 
-		<div class="w3-half">
-		<form class="w3-container w3-card-4">
-			<h2>Video</h2>
-	  		<div class="w3-group">
-	    		<input class="video w3-input" type="text" required>
-	    		<label class="w3-label w3-validate">Link 1</label>
-	  		</div>
-	  		<div class="w3-group">
-	    		<input class="video w3-input" type="text" required>
-	    		<label class="w3-label w3-validate">Link 2</label>
-	  		</div>
-		</form>
-		</div>
-	</div>
-	<div id="saveIndex" class="w3-center">
-		<br>
-		<a class="w3-btn">Save</a>
-	</div>
 	<hr>
 	<h2 class="w3-center">Gallery</h2>
-	<div class="w3-row-padding">
-
-		<div class="w3-half">
-		<form class="w3-container w3-card-4">
-			<h2>Picture</h2>
-	  		<div class="w3-group">
-	    		<input class="w3-input" type="text" required>
-	    		<label class="w3-label w3-validate">Link 1</label>
-	  		</div>
-	  		<div class="w3-group">
-	    		<input class="w3-input" type="text" required>
-	    		<label class="w3-label w3-validate">Link 2</label>
-	  		</div>
-	  		<div class="w3-group">
-	    		<input class="w3-input" type="text" required>
-	    		<label class="w3-label w3-validate">Link 3</label>
-	  		</div>
+	<div class="w3-container">
+		<form action="formGallery.php" method="get" class="w3-container w3-row-padding w3-card-4">
+				<h2>Video</h2>
+				<div class="w3-half">
+			  		<div class="w3-group">
+			    		<input class="video2 w3-input" type="text" name="vdo1" required>
+			    		<label class="w3-label w3-validate">Link 1</label>
+			  		</div>
+			  		<div class="w3-group">
+			    		<input class="video2 w3-input" type="text" name="vdo2" required>
+			    		<label class="w3-label w3-validate">Link 2</label>
+			  		</div>
+			  		<div class="w3-group">
+			    		<input class="video2 w3-input" type="text" name="vdo3" required>
+			    		<label class="w3-label w3-validate">Link 3</label>
+			  		</div>
+			  		<div class="w3-group">
+			    		<input class="video2 w3-input" type="text" name="vdo4" required>
+			    		<label class="w3-label w3-validate">Link 4</label>
+			  		</div>
+			  		<div class="w3-group">
+			    		<input class="video2 w3-input" type="text" name="vdo5" required>
+			    		<label class="w3-label w3-validate">Link 5</label>
+			  		</div>
+			  	</div>
+			  	<div class="w3-half">
+			  		<div class="w3-group">
+			    		<input class="video2 w3-input" type="text" name="vdo6" required>
+			    		<label class="w3-label w3-validate">Link 6</label>
+			  		</div>
+			  		<div class="w3-group">
+			    		<input class="video2 w3-input" type="text" name="vdo7" required>
+			    		<label class="w3-label w3-validate">Link 7</label>
+			  		</div>
+			  		<div class="w3-group">
+			    		<input class="video2 w3-input" type="text" name="vdo8" required>
+			    		<label class="w3-label w3-validate">Link 8</label>
+			  		</div>
+			  		<div class="w3-group">
+			    		<input class="video2 w3-input" type="text" name="vdo9" required>
+			    		<label class="w3-label w3-validate">Link 9</label>
+			  		</div>
+			  		<div class="w3-container w3-center w3-margin-bottom"><input class="w3-btn" type="submit"></div>
+				</div>	  
 		</form>
-		</div>
-
-		<div class="w3-half">
-		<form class="w3-container w3-card-4">
-			<h2>Video</h2>
-	  		<div class="w3-group">
-	    		<input class="w3-input" type="text" required>
-	    		<label class="w3-label w3-validate">Link 1</label>
-	  		</div>
-	  		<div class="w3-group">
-	    		<input class="w3-input" type="text" required>
-	    		<label class="w3-label w3-validate">Link 2</label>
-	  		</div>
-		</form>
-		</div>
 	</div>
+	<hr>
 </body>
 </html>
