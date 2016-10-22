@@ -50,13 +50,3 @@ $(document).keyup(function(e) {
         $(".w3-modal").css("display","none");
     } 
 });
-
-if(document.getElementById("id01").style.display!=="none"){
-	$(window).click(function() {
-		$(".w3-modal").css("display","none");
-	});
-
-	$("iframe").click(function(event){
-	    event.stopPropagation();
-	});
-}
