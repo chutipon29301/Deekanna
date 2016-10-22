@@ -6,6 +6,7 @@
 
 <head>
 	<title>De Kan Na</title>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" type="text/css" href="styles/w3.css">
@@ -39,8 +40,33 @@
 	    height: 0px;
 	}
 	</style>
+	<script>
+		var slide = document.getElementsByClassName("mySlides");
+		var video = document.getElementsByClassName("video");
+	    var xmlhttp = new XMLHttpRequest();
+		var url = "scripts/index_json.txt";
 
-	<meta charset="utf-8" />
+		xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+		    var array = JSON.parse(this.responseText);
+		    setSrc(array);
+		    }
+		};
+
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+
+		function setSrc(array){
+			var i,j;
+			for(i = 0;i<slide.length;i++){
+		        slide[i].setAttribute("src",array[i].url);
+		    }
+		    for(j=0;j<video.length;j++,i++){
+		    	video[j].setAttribute("src",array[i].url);
+		    }
+		}
+	</script>
+	
 </head>
 
 <body>
@@ -94,15 +120,16 @@
 		<div class="w3-container parallax" style="">
 		<h2 class="w3-center">Gallery</h2>
 		<div class="w3-content w3-display-container w3-margin-bottom" style="">
-			<img class="mySlides w3-card-4" src="images/mercy.png" style="width:100%">
-			<img class="mySlides w3-card-4" src="images/namking1.png" style="width:100%">
+			<img class="mySlides w3-card-4" src="" style="width:100%">
+			<img class="mySlides w3-card-4" src="" style="width:100%">
+			<img class="mySlides w3-card-4" src="" style="width:100%">
 			<div class="w3-center w3-display-middle" style="width:100%">
 				<div class="w3-left w3-btn-floating" onclick="plusDivs(-1)">&#10094;</div>
 				<div class="w3-right w3-btn-floating" onclick="plusDivs(1)">&#10095;</div>
 			</div>
 		</div>
 		</div>
-		<script>
+		<script type="text/javascript">
 			var slideIndex = 1;
 			showDivs(slideIndex);
 
@@ -120,7 +147,6 @@
 				}
 				x[slideIndex-1].style.display = "block"; 
 			}
-
 		</script>
 
 		<!-- End Slide Show --> <hr>
@@ -128,12 +154,12 @@
 		<div class="w3-row-padding w3-center w3-margin-top">
 			<div class="w3-half">
 			<div class="video-container" >
-				<iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315"  frameborder="1" style="height:100%;" allowfullscreen></iframe>
+				<iframe class="video" src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315"  frameborder="1" style="height:100%;" allowfullscreen></iframe>
    			</div>
    			</div>
    			<div class="w3-half">
 			<div class="video-container">
-   				<iframe width="560" height="315" src="https://www.youtube.com/embed/-MYwF6cW7T8" frameborder="1" style="height:100%;" allowfullscreen></iframe>
+   				<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/-MYwF6cW7T8" frameborder="1" style="height:100%;" allowfullscreen></iframe>
    			</div>
    			</div>
    		</div>

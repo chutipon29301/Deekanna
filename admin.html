@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<!-- Jquery -->
+<script src = "scripts/jquery-3.1.1.min.js"></script>
+<script src = "scripts/script.js"></script>
+
+<head>
+	<title>De Kan Na</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/w3.css">
+
+	<style>
+
+	</style>
+	<script>
+		var slide = document.getElementsByClassName("slide");
+		var video = document.getElementsByClassName("video");
+	    var xmlhttp = new XMLHttpRequest();
+		var url = "scripts/index_json.txt";
+
+		xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+		    var array = JSON.parse(this.responseText);
+		    setSrc(array);
+		    }
+		};
+
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+
+		function setSrc(array){
+			var i,j;
+			for(i = 0;i<slide.length;i++){
+		        slide[i].setAttribute("value",array[i].url);
+		    }
+		    for(j=0;j<video.length;j++,i++){
+		    	video[j].setAttribute("value",array[i].url);
+		    }
+		}
+
+		var full = location.pathname;
+		//var path = full.substr(1,full.lastIndexOf("/")) + "scripts/index_json.txt";
+		var path = "C:/xampp/htdocs/Dekanna/scripts/index_json.txt"
+		console.log(path);
+    	var fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+   		var fh = fso.CreateTextFile("C:/xampp/htdocs/Dekanna/scripts/index_json.txt", true); 
+   		
+		$(document).ready(function(){
+			$('#saveIndex').click(function(){
+				var i,j,s;
+				s = "[";
+				for(i=0;i<slide.length;i++){
+					s += "{"
+					s += "\"url\": \"" + slide[i].value +"\"";
+					s += "},"
+				}
+				for(j=0;j<video.length;j++,i++){
+					s += "{"
+					s += "\"url\": \"" + video[j].value +"\"";
+					s += "}"
+					if(j!=video.length-1)
+						s += ",";
+				}
+				s += "]"
+				console.log(s);
+				fh.WriteLine(s); 
+   				fh.Close();
+			});
+		});
+		/*var full = location.pathname;
+		var path = full.substr(1,full.lastIndexOf("/")) + "scripts/index.txt";
+		console.log(path);
+    	var fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+   		var fh = fso.CreateTextFile(path, true); 
+   		fh.WriteLine("hello"); 
+   		fh.Close();*/
+	</script>
+
+</head>
+
+<body>
+	<hr>
+	<h2 class="w3-center">Index</h2>
+	<div class="w3-row-padding">
+
+		<div class="w3-half">
+		<form class="w3-container w3-card-4">
+			<h2>Picture</h2>
+	  		<div class="w3-group">
+	    		<input class="slide w3-input" type="text" required>
+	    		<label class="w3-label w3-validate">Link 1</label>
+	  		</div>
+	  		<div class="w3-group">
+	    		<input class="slide w3-input" type="text" required>
+	    		<label class="w3-label w3-validate">Link 2</label>
+	  		</div>
+	  		<div class="w3-group">
+	    		<input class="slide w3-input" type="text" required>
+	    		<label class="w3-label w3-validate">Link 3</label>
+	  		</div>
+		</form>
+		</div>
+
+		<div class="w3-half">
+		<form class="w3-container w3-card-4">
+			<h2>Video</h2>
+	  		<div class="w3-group">
+	    		<input class="video w3-input" type="text" required>
+	    		<label class="w3-label w3-validate">Link 1</label>
+	  		</div>
+	  		<div class="w3-group">
+	    		<input class="video w3-input" type="text" required>
+	    		<label class="w3-label w3-validate">Link 2</label>
+	  		</div>
+		</form>
+		</div>
+	</div>
+	<div id="saveIndex" class="w3-center">
+		<br>
+		<a class="w3-btn">Save</a>
+	</div>
+	<hr>
+	<h2 class="w3-center">Gallery</h2>
+	<div class="w3-row-padding">
+
+		<div class="w3-half">
+		<form class="w3-container w3-card-4">
+			<h2>Picture</h2>
+	  		<div class="w3-group">
+	    		<input class="w3-input" type="text" required>
+	    		<label class="w3-label w3-validate">Link 1</label>
+	  		</div>
+	  		<div class="w3-group">
+	    		<input class="w3-input" type="text" required>
+	    		<label class="w3-label w3-validate">Link 2</label>
+	  		</div>
+	  		<div class="w3-group">
+	    		<input class="w3-input" type="text" required>
+	    		<label class="w3-label w3-validate">Link 3</label>
+	  		</div>
+		</form>
+		</div>
+
+		<div class="w3-half">
+		<form class="w3-container w3-card-4">
+			<h2>Video</h2>
+	  		<div class="w3-group">
+	    		<input class="w3-input" type="text" required>
+	    		<label class="w3-label w3-validate">Link 1</label>
+	  		</div>
+	  		<div class="w3-group">
+	    		<input class="w3-input" type="text" required>
+	    		<label class="w3-label w3-validate">Link 2</label>
+	  		</div>
+		</form>
+		</div>
+	</div>
+</body>
+</html>
