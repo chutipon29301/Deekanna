@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<!-- Jquery -->
+<script src = "scripts/jquery-3.1.1.min.js"></script>
+<script src = "scripts/script.js"></script>
+
+<head>
+	<title>De Kan Na</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/w3.css">
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav id="mySidenav" class="w3-sidenav w3-white w3-card-2 w3-hide-small" style="display:none">
+		<a href="index.html" class="w3-hover-pink">Home</a>
+		<a href="about_us.html">About us</a>
+		<a href="gallery.html">Gallery</a>
+		<a href="#">Registration</a>
+	</nav>
+	<!-- Small Navbar -->
+	<nav class="w3-navbar w3-large w3-left-align w3-card-8 w3-hide-medium w3-hide-large bg-pink1">
+		<li class="w3-hide-medium w3-hide-large w3-opennav w3-right bg-pink1">
+			<a class="toggle-nav w3-right">Option</a>
+		</li>
+		<li><a href="index.html">Home</a></li>
+	</nav>
+
+	<div class="panel w3-hide-medium w3-hide-large " style="display:none">
+		<ul class="w3-navbar w3-left-align w3-large">
+			
+			<li>
+				<a href="about_us.html">About Us</a>
+			</li>
+			<li>
+				<a href="gallery.html">Gallery</a>
+			</li>
+			<li>
+				<a href="#">Registration</a>
+			</li>
+		</ul>
+	</div>
+	<!-- End Small Navbar -->
+	<!-- End Navbar -->
+	
+	<div id="main">
+		<header class="w3-container cpink w3-hide-small ">
+			<p> 
+				<span class="w3-opennav w3-xlarge" onclick="nav_toggle()" id="openNav" style=" width:100%;">&#9776;
+					Deekanna
+					<a href="index.html">
+						<img  src="images/logo_36x36.png" />
+					</a>
+				</span>
+				<p id = "sideHead" class="w3-opennav w3-xlarge" style=" display:none; width:100%;">
+					Deekanna
+					<a href="index.html">
+						<img  src="images/logo_36x36.png" />
+					</a>
+				</p>
+			</p>
+		</header>
+
+		<div class=" w3-content w3-row" >
+			
+					<p class="w3-col bg-pink2 w3-xxlarge" > Registration </p>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeqEhDnZi2QRL7F17_rZnM-eDEp1_DkWP9vT-HrRoUwi2DMkw/viewform?embedded=true" width="760" height="760" frameborder="0" marginheight="0" marginwidth="0" class=" w3-col">กำลังโหลด...</iframe>
+					
+		</div>
+
+		<footer class="w3-container w3-row bg-pink1 w3-centered">
+			<div class = " w3-col "> 
+				<p>
+					<img src="images/logo_36x36.png" />Deekanna
+				</p> 
+			</div>
+			<div class ="w3-col">
+				<p>Footer Information</p> 
+			</div>
+			<div class ="w3-col">
+				<p>
+					<a href="#"> information </a>
+				</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
