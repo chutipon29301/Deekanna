@@ -14,9 +14,14 @@
 			<?php
 				$s = "[{\"url\": \"".$_GET["pic1"]."\"},";
 				$s = $s."{\"url\": \"".$_GET["pic2"]."\"},";
-				$s = $s."{\"url\": \"".$_GET["pic3"]."\"},";
-				$s = $s."{\"url\": \"".$_GET["vdo1"]."\"},";
-				$s = $s."{\"url\": \"".$_GET["vdo2"]."\"}]";
+				$s = $s."{\"url\": \"".$_GET["pic4"]."\"},";
+				$s = $s."{\"url\": \"".$_GET["pic5"]."\"},";
+				$s = $s."{\"url\": \"".$_GET["pic6"]."\"},";
+				$s = $s."{\"url\": \"".$_GET["pic7"]."\"},";
+				$s = $s."{\"url\": \"".$_GET["pic8"]."\"},";
+				$s = $s."{\"url\": \"".$_GET["pic9"]."\"},";
+				$s = $s."{\"url\": \"".$_GET["pic10"]."\"},";
+				$s = $s."{\"url\": \"".$_GET["vdo1"]."\"}]";
 				$myfile = fopen("scripts/index_json.txt", "w") or die("Unable to open file!");
 				echo $s;
 				fwrite($myfile, $s);

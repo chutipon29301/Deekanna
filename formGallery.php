@@ -18,9 +18,7 @@
 				$s = $s."{\"url\": \"".$_GET["vdo4"]."\"},";
 				$s = $s."{\"url\": \"".$_GET["vdo5"]."\"},";
 				$s = $s."{\"url\": \"".$_GET["vdo6"]."\"},";
-				$s = $s."{\"url\": \"".$_GET["vdo7"]."\"},";
-				$s = $s."{\"url\": \"".$_GET["vdo8"]."\"},";
-				$s = $s."{\"url\": \"".$_GET["vdo9"]."\"}]";
+				$s = $s."{\"url\": \"".$_GET["vdo7"]."\"}]";
 				$myfile = fopen("scripts/index_json.txt", "w") or die("Unable to open file!");
 				echo $s;
 				fwrite($myfile, $s);
