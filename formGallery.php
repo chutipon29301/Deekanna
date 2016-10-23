@@ -12,7 +12,7 @@
 		</header>
 		<div class="w3-container w3-padding-top">
 			<?php
-				/*$s = "[{\"url\": \"".$_GET["vdo1"]."\"},";
+				$s = "[{\"url\": \"".$_GET["vdo1"]."\"},";
 				$s = $s."{\"url\": \"".$_GET["vdo2"]."\"},";
 				$s = $s."{\"url\": \"".$_GET["vdo3"]."\"},";
 				$s = $s."{\"url\": \"".$_GET["vdo4"]."\"},";
@@ -24,7 +24,7 @@
 				$myfile = fopen("scripts/index_json.txt", "w") or die("Unable to open file!");
 				echo $s;
 				fwrite($myfile, $s);
-				fclose($myfile);*/
+				fclose($myfile);
 			?>
 		</div>
 		<hr>

@@ -17,6 +17,7 @@
 	<script>
 		var slide = document.getElementsByClassName("slide");
 		var video = document.getElementsByClassName("video");
+		var video2 = document.getElementsByClassName("video2");
 	    var xmlhttp = new XMLHttpRequest();
 		var url = "scripts/index_json.txt";
 
@@ -30,6 +31,19 @@
 		xmlhttp.open("GET", url, true);
 		xmlhttp.send();
 
+		var xmlhttp2 = new XMLHttpRequest();
+		var url2 = "scripts/gallery_json.txt";
+
+		xmlhttp2.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+		    var array2 = JSON.parse(this.responseText);
+		    setSrc2(array2);
+		    }
+		};
+
+		xmlhttp2.open("GET", url2, true);
+		xmlhttp2.send();
+
 		function setSrc(array){
 			var i,j;
 			for(i = 0;i<slide.length;i++){
@@ -37,6 +51,12 @@
 		    }
 		    for(j=0;j<video.length;j++,i++){
 		    	video[j].setAttribute("value",array[i].url);
+		    }
+		}
+		function setSrc2(array){
+			var i;
+			for(i = 0;i<video2.length;i++){
+		        video2[i].setAttribute("value",array[i].url);
 		    }
 		}
 	</script>

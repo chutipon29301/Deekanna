@@ -10,6 +10,35 @@
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" type="text/css" href="styles/w3.css">
 	<meta charset="utf-8" />
+  <script>
+    var image = document.getElementsByClassName("img");
+    var video = document.getElementsByClassName("video");
+      var xmlhttp = new XMLHttpRequest();
+    var url = "scripts/gallery_json.txt";
+
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var array = JSON.parse(this.responseText);
+        setSrc(array);
+        }
+    };
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    function setSrc(array){
+      var i,link;
+      for(i=0;i<video.length;i++){
+        link = array[i].url;
+        link = link.replace("www","img");
+        link = link.replace("embed","vi");
+        link = link+"/0.jpg"
+        console.log(link);
+        image[i].setAttribute("src",link);
+        video[i].setAttribute("src",array[i].url);
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -66,160 +95,147 @@
 		</header>
 
 	<!--body  -->
-    <div class="w3-container w3-row bg-pink2 w3-center w3-row-padding " style="margin-left:10%; margin-right:10%;">
-    	<!--First row -->
-        <div class="w3-container w3-third ">
-  			<div class="w3-card-8" style="width:100%">
-   				 <img src="" alt="" style="width:100%">
-                
-				<div onclick="document.getElementById('id01').style.display='block'" class="video-container">
-					<img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg">
-   				</div>
-
-   				<div id="id01" class="w3-modal">
-  					<div class="w3-modal-content w3-animate-zoom w3-card-8">
-    					<div class="w3-container" style="background-color: #fac3db;">
-      						<span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
-      						<iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="800" height="600" frameborder="1" allowfullscreen></iframe>
-    					</div>
-  					</div>
-				</div>
-   			
-    			<div class="w3-container">
-      				<h4><b></b></h4>
-      				<p></p>
-    			</div>
-  			</div>
-  		<br>
-    	</div>
-        
-        <div class="w3-container w3-third ">
-  			<div class="w3-card-8" style="width:100%">
-   				 <img src="" alt="" style="width:100%">
-                
-				<div onclick="document.getElementById('id01').style.display='block'" class="video-container">
-					<img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg">
-   				</div>
-
-   				<div id="id01" class="w3-modal">
-  					<div class="w3-modal-content w3-animate-zoom w3-card-8">
-    					<div class="w3-container" style="background-color: #fac3db;">
-      						<span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
-      						<iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="800" height="600" frameborder="1" allowfullscreen></iframe>
-    					</div>
-  					</div>
-				</div>
-   			
-    			<div class="w3-container">
-      				<h4><b></b></h4>
-      				<p></p>
-    			</div>
-  			</div>
-  		<br>
-    	</div>
-        
-        <div class="w3-container w3-third ">
-  			<div class="w3-card-8" style="width:100%">
-   				 <img src="" alt="" style="width:100%">
-                
-				<div onclick="document.getElementById('id01').style.display='block'" class="video-container">
-					<img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg">
-   				</div>
-
-   				<div id="id01" class="w3-modal">
-  					<div class="w3-modal-content w3-animate-zoom w3-card-8">
-    					<div class="w3-container" style="background-color: #fac3db;">
-      						<span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
-      						<iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="800" height="600" frameborder="1" allowfullscreen></iframe>
-    					</div>
-  					</div>
-				</div>
-   			
-    			<div class="w3-container">
-      				<h4><b></b></h4>
-      				<p></p>
-    			</div>
-  			</div>
-  		<br>
-    	</div>
-        
-        <!--Secon row row -->
-        <div class="w3-container w3-third ">
-  			<div class="w3-card-8" style="width:100%">
-   				 <img src="" alt="" style="width:100%">
-                
-				<div onclick="document.getElementById('id01').style.display='block'" class="video-container">
-					<img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg">
-   				</div>
-
-   				<div id="id01" class="w3-modal">
-  					<div class="w3-modal-content w3-animate-zoom w3-card-8">
-    					<div class="w3-container" style="background-color: #fac3db;">
-      						<span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
-      						<iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="800" height="600" frameborder="1" allowfullscreen></iframe>
-    					</div>
-  					</div>
-				</div>
-   			
-    			<div class="w3-container">
-      				<h4><b></b></h4>
-      				<p></p>
-    			</div>
-  			</div>
-  		<br>
-    	</div>
-        
-        <div class="w3-container w3-third ">
-  			<div class="w3-card-8" style="width:100%">
-   				 <img src="" alt="" style="width:100%">
-                
-				<div onclick="document.getElementById('id01').style.display='block'" class="video-container">
-					<img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg">
-   				</div>
-
-   				<div id="id01" class="w3-modal">
-  					<div class="w3-modal-content w3-animate-zoom w3-card-8">
-    					<div class="w3-container" style="background-color: #fac3db;">
-      						<span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
-      						<iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="800" height="600" frameborder="1" allowfullscreen></iframe>
-    					</div>
-  					</div>
-				</div>
-   			
-    			<div class="w3-container">
-      				<h4><b></b></h4>
-      				<p></p>
-    			</div>
-  			</div>
-  		<br>
-    	</div>
-        
-        <div class="w3-container w3-third ">
-  			<div class="w3-card-8" style="width:100%">
-   				 <img src="" alt="" style="width:100%">
-                
-				<div onclick="document.getElementById('id01').style.display='block'" class="video-container">
-					<img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg">
-   				</div>
-
-   				<div id="id01" class="w3-modal">
-  					<div class="w3-modal-content w3-animate-zoom w3-card-8">
-    					<div class="w3-container" style="background-color: #fac3db;">
-      						<span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
-      						<iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="800" height="600" frameborder="1" allowfullscreen></iframe>
-    					</div>
-  					</div>
-				</div>
-   			
-    			<div class="w3-container">
-      				<h4><b></b></h4>
-      				<p></p>
-    			</div>
-  			</div>
-  		<br>
-    	</div>
-       
+    <!-- IMG -->
+    <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
+      <div class="w3-third">
+        <div onclick="document.getElementById('id01').style.display='block'" class="w3-container w3-hover-opacity">
+          <img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg" class="img w3-card-4" style="width:100%;cursor:zoom-in">
         </div>
+      </div>
+      <div class="w3-third">
+        <div onclick="document.getElementById('id02').style.display='block'" class="w3-container w3-hover-opacity">
+          <img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg" class="img w3-card-4" style="width:100%;cursor:zoom-in">
+        </div>
+      </div>
+      <div class="w3-third">
+        <div onclick="document.getElementById('id03').style.display='block'" class="w3-container w3-hover-opacity">
+          <img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg" class="img w3-card-4" style="width:100%;cursor:zoom-in">
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
+      <div class="w3-third">
+        <div onclick="document.getElementById('id04').style.display='block'" class="w3-container w3-hover-opacity">
+          <img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg" class="img w3-card-4" style="width:100%;cursor:zoom-in">
+        </div>
+      </div>
+      <div class="w3-third">
+        <div onclick="document.getElementById('id05').style.display='block'" class="w3-container w3-hover-opacity">
+          <img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg" class="img w3-card-4" style="width:100%;cursor:zoom-in">
+        </div>
+      </div>
+      <div class="w3-third">
+        <div onclick="document.getElementById('id06').style.display='block'" class="w3-container w3-hover-opacity">
+          <img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg" class="img w3-card-4" style="width:100%;cursor:zoom-in">
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
+      <div class="w3-third">
+        <div onclick="document.getElementById('id07').style.display='block'" class="w3-container w3-hover-opacity">
+          <img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg" class="img w3-card-4" style="width:100%;cursor:zoom-in">
+        </div>
+      </div>
+      <div class="w3-third">
+        <div onclick="document.getElementById('id08').style.display='block'" class="w3-container w3-hover-opacity">
+          <img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg" class="img w3-card-4" style="width:100%;cursor:zoom-in">
+        </div>
+      </div>
+      <div class="w3-third">
+        <div onclick="document.getElementById('id09').style.display='block'" class="w3-container w3-hover-opacity">
+          <img src="https://img.youtube.com/vi/7RP3g9avaHc/0.jpg" class="img w3-card-4" style="width:100%;cursor:zoom-in">
+        </div>
+      </div>
+    </div>
+    <!-- END -->
+
+    <!-- Modal -->
+      <div id="id01" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-content" >
+            <div class="w3-container">
+              <div class="video-container w3-animate-zoom w3-card-8">
+                <iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315" frameborder="1" style="height:100%;" class="video" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="id02" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-content" >
+            <div class="w3-container">
+              <div class="video-container w3-animate-zoom w3-card-8">
+                <iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315" frameborder="1" style="height:100%;" class="video" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="id03" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-content" >
+            <div class="w3-container">
+              <div class="video-container w3-animate-zoom w3-card-8">
+                <iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315" frameborder="1" style="height:100%;" class="video" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="id04" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-content">
+            <div class="w3-container">
+              <div class="video-container w3-animate-zoom w3-card-8">
+                <iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315" frameborder="1" style="height:100%;" class="video" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="id05" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-content" >
+            <div class="w3-container">
+              <div class="video-container w3-animate-zoom w3-card-8">
+                <iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315" frameborder="1" style="height:100%;" class="video" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="id06" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-content" >
+            <div class="w3-container">
+              <div class="video-container w3-animate-zoom w3-card-8">
+                <iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315" frameborder="1" style="height:100%;" class="video" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="id07" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-content" >
+            <div class="w3-container">
+              <div class="video-container w3-animate-zoom w3-card-8">
+                <iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315" frameborder="1" style="height:100%;" class="video" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="id08" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-content" >
+            <div class="w3-container">
+              <div class="video-container w3-animate-zoom w3-card-8">
+                <iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315" frameborder="1" style="height:100%;" class="video" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="id09" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-content" >
+            <div class="w3-container">
+              <div class="video-container w3-animate-zoom w3-card-8">
+                <iframe src="https://www.youtube.com/embed/7RP3g9avaHc" width="560" height="315" frameborder="1" style="height:100%;" class="video" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+    <!-- End -->
+    
+    
 
 		<footer class="w3-container w3-row bg-pink1 w3-centered">
 			<div class = " w3-col "> 
@@ -236,6 +252,6 @@
 				</p>
 			</div>
 		</footer>
-	</div>
+	</div> <!-- End Main -->
 </body>
 </html>
