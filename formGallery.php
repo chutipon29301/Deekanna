@@ -19,7 +19,7 @@
 				$s = $s."{\"url\": \"".$_GET["vdo5"]."\"},";
 				$s = $s."{\"url\": \"".$_GET["vdo6"]."\"},";
 				$s = $s."{\"url\": \"".$_GET["vdo7"]."\"}]";
-				$myfile = fopen("scripts/index_json.txt", "w") or die("Unable to open file!");
+				$myfile = fopen("scripts/gallery_json.txt", "w") or die("Unable to open file!");
 				echo $s;
 				fwrite($myfile, $s);
 				fclose($myfile);
