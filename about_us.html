@@ -60,6 +60,15 @@
 </head>
 
 <body>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8"; 
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- Navbar -->
   <div class="w3-hide-small">
   <nav id="mySidenav" class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none">
@@ -114,7 +123,8 @@
 		</div>	
 		<div class="w3-content">
 			<div class="w3-container">
-				<iframe class="w3-right" width="150" height="34" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdeekanna%2F&amp;width=70&amp;layout=button_count&amp;action=like&amp;size=large&amp;show_faces=true&amp;share=true&amp;height=46&amp;appId" frameborder="0" scrolling="no" style="border:none;overflow:hidden;align-content: center;" allowtransparency="true"></iframe>
+				<div class="fb-like" data-href="https://www.facebook.com/deekanna/" data-width="150" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+				<!-- <iframe class="w3-right" width="150" height="34" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdeekanna%2F&amp;width=70&amp;layout=button_count&amp;action=like&amp;size=large&amp;show_faces=true&amp;share=true&amp;height=46&amp;appId" frameborder="0" scrolling="no" style="border:none;overflow:hidden;align-content: center;" allowtransparency="true"></iframe> -->
 			</div>
 		</div>
 		<br><br><br><br>
